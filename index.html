@@ -13,10 +13,15 @@
     <header>
         <div class="container">
             <h1>ONG Esperança viva</h1>
-            
+
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         
             <nav>
-                <ul>
+                <ul id="menu">
 
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="projetos.html">Projetos</a></li>
@@ -27,35 +32,44 @@
         </div>
     </header>
 
-    <main>
+    <main class="container">
         <section id="sobre">
             <h2>Quem Somos</h2>
             <p>A ONG Esperança Viva é uma organização sem fins lucrativos dedicada a transformar vidas através da solidariedade e da inclusão social.</p>
-            <img src="img/thumb_esperança-viva.jpg" alt="Equipe da ONG trabalhando em projeto social" width="500px">
+            <img src="img/thumb_esperança-viva.jpg" alt="Equipe da ONG trabalhando em projeto social" width="100%">
         </section>
 
         <section id="missao-visao-valores">
             <h2>Missão, visão e valores</h2>
-            <article>
-                <h3>Missão</h3>
-                <p>Promover a inclusão social e a melhoria da qualidade de vida de comunidades em situação de vulnerabilidade</p>
-            </article>
+            <div class="grid">
+                <div class="card">
+                    <article>
+                        <h3>Missão</h3>
+                        <p>Promover a inclusão social e a melhoria da qualidade de vida de comunidades em situação de vulnerabilidade</p>
+                    </article>
+                </div>
 
-            <article>
-                <h3>Visão</h3>
-                <p>Ser referência em impacto social positivo e transparência nas ações.</p>
-            </article>
+                <div class="card">
+                    <article>
+                        <h3>Visão</h3>
+                        <p>Ser referência em impacto social positivo e transparência nas ações.</p>
+                    </article>
+                </div>
 
-            <article>
-                <h3>Valores</h3>
-                <ul>
-                    <li>Transparência</li>
-                    <li>Empatia</li>
-                    <li>Respeito</li>
-                    <li>Responsabilidade social</li>
-                </ul>
-            </article>
+                <div class="card">
+                    <article>
+                        <h3>Valores</h3>
+                        <ul>
+                            <li>Transparência</li>
+                            <li>Empatia</li>
+                            <li>Respeito</li>
+                            <li>Responsabilidade social</li>
+                        </ul>
+                    </article>
+                </div>
 
+            </div>
+            
         </section>
 
         <section id="contato">
@@ -72,6 +86,15 @@
     <footer>
         <p>&copy; 2025 ONG Esperança Viva - Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+    
+        toggle.addEventListener("click", () => {
+          menu.classList.toggle("show");
+        });
+      </script>
 
 </body>
 </html>
