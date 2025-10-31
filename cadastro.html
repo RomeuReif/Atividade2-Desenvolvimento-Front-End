@@ -11,17 +11,27 @@
 <body>
     
     <header>
-        <h1>Cadastro de Voluntário</h1>
+        <div class="container">
+            <h1>Cadastro de Voluntário</h1>
+
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         <nav>
-            <ul>
+            <ul id="menu">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
         </nav>
+        </div>
+
+        
     </header>
     
-    <main>
+    <main class="container">
 
         <section id="formulario">
             <h2>Preencha seus dados</h2>
@@ -65,7 +75,7 @@
                 </select>
             </fieldset>
     
-                <button type="submit">Enviar Cadastro</button>
+                <button type="submit" class="btn">Enviar Cadastro</button>
             </form>
         </section>
 
@@ -75,5 +85,12 @@
         <p>&copy; 2025 ONG Esperança Viva</p>
     </footer>
 
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+        toggle.addEventListener("click", () => {
+          menu.classList.toggle("show");
+        });
+      </script>
 </body>
 </html>
